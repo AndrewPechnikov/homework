@@ -1,0 +1,26 @@
+.posts {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 370px 290px;
+	grid-gap: 40px 30px;
+	width: 100%;
+
+	// .top-posts__main-post
+
+	&__main-post {
+		grid-area: 1/ 1 / span 1 / span 2;
+		display: flex;
+		background-color: #231f20;
+		color: #fff;
+
+		@media screen and (max-width: $little-desktop-width) {
+			display: block;
+			grid-area: 1/ 1 / span 1 / span 1;
+		}
+	}
+
+	@media screen and (max-width: $little-desktop-width) {
+		@include flex;
+		flex-direction: column;
+	}
+}

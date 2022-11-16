@@ -1,0 +1,11 @@
+.logo {
+    font-family: $logo-font;
+    font-size: 18px;
+}
+
+
+@media screen and (min-width:$phone-width ) and (max-width: $tablet-width) {
+    .logo {
+        font-size: 25px;
+    }
+}

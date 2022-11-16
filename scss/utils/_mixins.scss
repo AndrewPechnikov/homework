@@ -1,0 +1,16 @@
+@mixin flex {
+    display: flex;
+    align-items: center;
+}
+
+@mixin border($border-color, $border-radius) {
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+}
+
+@mixin paddings($padding-top, $padding-right, $padding-bottom, $padding-left) {
+    padding-top: $padding-top;
+    padding-right: $padding-right;
+    padding-bottom: $padding-bottom;
+    padding-left: $padding-left;
+}

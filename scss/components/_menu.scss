@@ -1,0 +1,37 @@
+.menu {
+    display: flex;
+
+    &__item {
+        align-self: center;
+        padding: 47.37px 0;
+        position: relative;
+
+        &:hover {
+            background-color: #231f20;
+            color: #fff;
+        }
+    }
+
+    &__decoration {
+        position: absolute;
+        top: 97%;
+
+        background-color: transparent;
+        height: 4px;
+        width: 100%;
+    }
+
+    &__item:hover .menu__decoration {
+        background-color: $main-color;
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 31px;
+    }
+}
+
+@media screen and (min-width: $phone-width) and (max-width: $tablet-width) {
+    .header-menu {
+        display: none;
+    }
+}

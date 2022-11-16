@@ -1,0 +1,42 @@
+.secondary-post-card {
+	padding: 48px;
+	transition: 0.5s;
+
+	@media screen and (min-width: $tablet-width) and (max-width: $little-desktop-width) {
+		width: $tablet-width;
+	}
+
+	@media screen and (min-width: $phone-width) and (max-width: $tablet-width) {
+		width: 100%;
+	}
+
+	& > *:not(:last-child) {
+		margin-bottom: 16px;
+	}
+
+	&:hover {
+		box-shadow: 10px 15px rgba(0, 0, 0, 0.05);
+	}
+
+	&__title {
+		font-size: 24px;
+		@media screen and (min-width: $phone-width) and (max-width: $tablet-width) {
+			font-size: 20px;
+		}
+	}
+
+	// .secondary-post-card__about
+
+	&__about {
+		font-size: 18px;
+		@media screen and (min-width: $phone-width) and (max-width: $tablet-width) {
+			font-size: 16px;
+		}
+	}
+
+	// .secondary-post-card__read-more
+
+	&__read-more {
+		font-size: 14px;
+	}
+}

@@ -1,0 +1,44 @@
+.header {
+	background-color: $header-and-cards-background-color;
+
+	// TODO Пропрацювати контейнер для хеадера.
+	&__flex-container {
+		display: flex;
+		align-items: center;
+		height: 116px;
+	}
+
+	&__logo {
+		color: $logo-header-color;
+		margin-left: calc((100% - 512px) / 100 * 8.6);
+		margin-right: calc((100% - 512px) / 100 * 46.6);
+	}
+
+	&__menu {
+		margin-right: calc((100% - 512px) / 100 * 35);
+	}
+
+	&__button {
+		background-color: transparent;
+		color: $main-color;
+		padding: 13px 25px;
+	}
+}
+
+@media screen and (min-width: $phone-width) and (max-width: $tablet-width) {
+	.header {
+		&__flex-container {
+			justify-content: space-between;
+		}
+
+		&__logo {
+			margin-left: 25px;
+			margin-right: 0;
+			justify-self: flex-start;
+		}
+		&__button {
+			margin-right: 25px;
+			justify-self: flex-end;
+		}
+	}
+}

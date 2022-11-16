@@ -1,0 +1,15 @@
+.social {
+	display: flex;
+	&__item {
+		width: 40px;
+		height: 40px;
+	}
+
+	&__item:not(:last-child) {
+		margin-right: 24px;
+	}
+
+	&__footer {
+		margin-bottom: 72px;
+	}
+}

@@ -1,0 +1,102 @@
+.hero {
+    background-color: $hero-background-color;
+
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    height: 100%;
+
+    &__subsection--first {
+        @include paddings(154px, 126px, 0px, 161px);
+        width: 720px;
+    }
+
+    &__subsection--second {
+        @include paddings(164px, 166px, 0px, 111px);
+        width: 720px;
+    }
+
+    &__main-title {
+        font-family: Gilroy-semibold;
+        font-size: 56px;
+        line-height: 1.225;
+        margin-bottom: 36px;
+    }
+
+    &__title {
+        margin-bottom: 36px;
+    }
+
+    &__img {
+        width: 720px;
+    }
+
+    &__description {
+        font-size: 20px;
+        line-height: 1.4;
+        margin-bottom: 52px;
+    }
+
+    &__button {
+        height: 60px;
+        &--filled {
+            background-color: $main-color;
+            color: $white-color;
+        }
+    }
+    &__button--filled:hover {
+        background-color: transparent;
+        color: $main-color;
+    }
+}
+
+@media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+    .hero {
+        &__subsection {
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 100px;
+        }
+
+        &__img {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media screen and (min-width: $phone-width) and (max-width: $tablet-width) {
+    .hero {
+        &__subsection {
+            padding: 100px 80px;
+            width: 100%;
+        }
+
+        &__img {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        &__main-title {
+            font-size: calc(25px + (56 - 25) * ((100vw - 375px) / (768 - 375)));
+            line-height: 1.11;
+            margin-bottom: 18px;
+        }
+
+        &__title {
+            font-size: calc(20px + (32 - 20) * ((100vw - 375px) / (768 - 375)));
+            line-height: 1.2;
+            margin-bottom: 18px;
+        }
+
+        &__description {
+            font-size: calc(16px + (20 - 16) * ((100vw - 375px) / (768 - 375)));
+            line-height: 1.2;
+            margin-bottom: 26px;
+        }
+    }
+}

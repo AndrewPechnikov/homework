@@ -1,0 +1,76 @@
+.card {
+    &__image {
+        width: 270px;
+    }
+
+    &__sign {
+        padding: 24px 24px;
+    }
+
+    &__title {
+        font-family: $gilroy-regular;
+        font-size: 20px;
+
+        margin-bottom: 74px;
+    }
+
+    &__see-more-link {
+        display: block;
+        font-family: Roboto;
+        font-size: 14px;
+        cursor: pointer;
+
+        &:hover {
+            color: $main-color;
+        }
+    }
+}
+
+@media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+    .card {
+        &__image {
+            width: 369px;
+        }
+
+        &__title {
+            font-family: $gilroy-regular;
+            font-size: 30px;
+
+            margin-bottom: 74px;
+        }
+
+        &__see-more-link {
+            display: block;
+            font-family: Roboto;
+            font-size: 20px;
+        }
+    }
+}
+
+@media screen and (min-width: $phone-width) and (max-width: $tablet-width) {
+    .card {
+        &__image {
+            width: 369px;
+        }
+
+        &__title {
+            font-family: $gilroy-regular;
+            font-size: 30px;
+            margin-bottom: 74px;
+        }
+
+        &__see-more-link {
+            display: block;
+            font-family: Roboto;
+            font-size: 20px;
+        }
+    }
+}
+
+@media screen and (min-width: $phone-width) and (max-width: $tablet-width) {
+    .card {
+        &__image {
+            width: 375px;
+        }
+    }
+}
